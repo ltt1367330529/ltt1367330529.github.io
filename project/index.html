@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Project | NetMedia
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="NetMedia" type="application/atom+xml">
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>NetMedia</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">People</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Environment</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Achievements</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">Competition</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">People</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Environment</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Achievements</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">Competition</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <style>
+  table {
+      width: 80%;
+      border-collapse: separate;
+      border-spacing: 20px;
+      margin-top: 50px;
+      margin-left: 4cm;
+  }
+
+  td {
+      padding: 0;
+      text-align: center;
+      border: none;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 0.5cm;
+      width:33.33%
+  }
+
+  td div {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+  }
+
+  td span.title {
+      font-size: 20px; /* Increased font size */
+      font-weight: bold;
+      display: flex;
+  }
+
+  td span.content {
+      font-size: 16px;
+      color: #999;
+      margin-top: 10px; /* Added margin to separate title and content */
+  }
+
+  a {
+      text-decoration: none;
+      color: #000;
+      transition: color 0.3s;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    border: none;
+  }
+
+  a:hover {
+      color: #0000AA;
+  }
+</style>
+
+<table>
+  <tr>
+      <th colspan="3" style="text-align: left;">
+          <h2 style="margin-left: 0;">科研项目</h2>
+      </th>
+  </tr>
+  <tr>
+      <td>
+          <div>
+              <a href="/project/keyan/" target="_blank">
+                <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">基于压缩域知识的快速多流视频分类框架的研究</span>
+              </a>
+              <div>
+                  <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+              </div>
+          </div>
+      </td>
+      <td>
+          <div>
+            <a href="/project/keyan/" target="_blank">
+              <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">机器学习赋能的大数据分析软件系统可靠性保障技术研发及支撑平台应用</span>
+            </a>
+              <div>
+                  <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+              </div>
+          </div>
+      </td>
+      <td>
+          <div>
+            <a href="/project/keyan/" target="_blank">
+              <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">基于H.264/AVC压缩域的监控视频摘要技术研究</span>
+            </a>
+              <div>
+                  <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+              </div>
+          </div>
+      </td>
+  </tr>
+  <tr>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">移动终端视频目标快速识别技术研究</span>
+            </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">基于IPv6的智能安防预警系统</span>
+          </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">基于压缩域的视频检索技术的研究</span>
+          </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+</tr>
+</table>
+
+<table>
+  <tr>
+      <th colspan="3" style="text-align: left;">
+          <h2 style="margin-left: 0;">高校项目</h2>
+      </th>
+  </tr>
+  <tr>
+      <td>
+          <div>
+            <a href="/project/keyan/" target="_blank">
+              <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">校园订餐系统</span>
+              </a>
+              <div>
+                  <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+              </div>
+          </div>
+      </td>
+      <td>
+          <div>
+            <a href="/project/keyan/" target="_blank">
+              <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">计算机网络组网与配置虚拟仿真实验平台</span>
+            </a>
+              <div>
+                  <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+              </div>
+          </div>
+      </td>
+      <td>
+          <div>
+            <a href="/project/keyan/" target="_blank">
+              <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">计算机组成原理课程虚仿实验平台</span>
+            </a>
+              <div>
+                  <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+              </div>
+          </div>
+      </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h2 style="margin-left: 0;">企业项目</h2>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">内蒙古广纳科技有限公司</h3>
+    </th>
+  </tr>
+  <tr>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">基于遥感影像的露天煤矿生态环境监测技术研究</span>
+            </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">部标JTT808协议通信服务开发项目</span>
+          </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">挖掘机挖齿智能识别项目</span>
+          </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">驾驶员安全驾驶疲劳预警系统</span>
+            </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">视频安全帽识别系统</span>
+          </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div>
+          <a href="/project/keyan/" target="_blank">
+            <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">智能车牌对比系统</span>
+          </a>
+            <div>
+                <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">内蒙古高速公路局</h3>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+  </tr>
+  <tr>
+    <td colspan="1">
+      <div>
+        <a href="/project/keyan/" target="_blank">
+          <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">内蒙古高速互联网+公众出行服务平台</span>
+        </a>
+        <div>
+          <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">内蒙古龙源新能源发展有限公司</h3>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+  </tr>
+  <tr>
+    <td colspan="1">
+      <div>
+        <a href="/project/keyan/" target="_blank">
+          <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">财务分析项目</span>
+        </a>
+        <div>
+          <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">内蒙古人民医院</h3>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+  </tr>
+  <tr>
+    <td colspan="1">
+      <div>
+        <a href="/project/keyan/" target="_blank">
+          <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">核磁数据分析项目</span>
+        </a>
+        <div>
+          <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">呼和浩特人保公司</h3>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+  </tr>
+  <tr>
+    <td colspan="1">
+      <div>
+        <a href="/project/keyan/" target="_blank">
+          <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">药品耗材专项数据服务项目</span>
+        </a>
+        <div>
+          <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">内蒙古矿业集团锋威广电有限公司</h3>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+  </tr>
+  <tr>
+    <td colspan="1">
+      <div>
+        <a href="/project/keyan/" target="_blank">
+          <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">无人机光伏智能巡检平台</span>
+        </a>
+        <div>
+          <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="3" style="text-align: left;">
+      <h3 style="margin-left: 0; font-size: larger;">鄂尔多斯市伊金霍洛旗自来水公司</h3>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+    <th colspan="1" style="width: 33.33%;"></th>
+  </tr>
+  <tr>
+    <td colspan="1">
+      <div>
+        <a href="/project/keyan/" target="_blank">
+          <span class="title" onmouseover="this.style.color='#0000AA'" onmouseout="this.style.color='#000'">智慧水务平台</span>
+        </a>
+        <div>
+          <span class="content">这是一个很棒的项目，特别棒，超级棒。</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2023 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
